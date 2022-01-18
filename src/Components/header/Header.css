@@ -12,6 +12,7 @@
   width: 87.72%;
   position: relative;
   max-width: 1060px;
+  box-sizing: border-box;
 }
 
 .mainbar_nav {
@@ -105,36 +106,75 @@
 }
 
 .menubar_aside {
-  height: 100%;
-  padding: 10px 0;
+  padding: 9px 0;
+  box-sizing: border-box;
 }
 .menubar_aside ul {
   height: 100%;
   margin: 0;
-  list-style: none;
-  display: flex;
-  padding: 0px;
 }
 .menubar_aside li {
   position: relative;
-
+  display: inline-block;
   height: 100%;
   vertical-align: middle;
+  box-sizing: border-box;
 }
 
-.menubar_aside li:first-child {
-  margin-top: 5px;
-  padding: 0 10px;
+.menubar_aside .service_btn {
+  display: inline-flex;
 }
-
-.menubar_aside li i {
+.fas.fa-search::before {
+  width: 18px;
+  height: 18px;
   font-size: 18px;
-  margin: 0;
+}
+.far.fa-bell::before {
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
 }
 
-.menubar_aside li img {
-  width: 28px;
-  height: 28px;
+.menubar_aside li button {
+  background: none;
+  border: none;
+}
+
+.search_btn {
+  position: relative;
+  margin-top: 5px;
+}
+.noti_btn {
+  position: relative;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.noti_btn span {
+  top: -5px;
+  left: 23px;
+}
+
+.profile_btn {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  vertical-align: top;
+  padding: 0;
+  margin-right: 11px;
+  box-sizing: border-box;
+}
+
+.profile_btn span {
+  top: 2px;
+  left: 23px;
+}
+
+.profile_btn img {
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
   border-radius: 50%;
   background-position: 50%;
   background-size: cover;
@@ -145,34 +185,13 @@
   background-color: rgb(51, 102, 255);
   width: 13px;
   height: 13px;
-  top: -4px;
-  left: 26px;
+  position: absolute;
   display: flex;
   justify-content: center;
   border-radius: 5px;
   color: white;
   font-size: 3px;
   font-weight: 300;
-  position: absolute;
-}
-
-.noti_btn {
-  position: relative;
-  padding: 0 10px;
-  margin-right: 10px;
-  margin-top: 5px;
-}
-
-.profile_btn {
-  flex-direction: row;
-  padding: 0px;
-  align-items: center;
-  margin-right: 5px;
-}
-
-.service_btn {
-  padding: 0 10px;
-  display: flex;
 }
 
 .service_btn::before {
@@ -185,6 +204,8 @@
 }
 
 .service_btn a {
+  display: inline-block;
+  vertical-align: bottom;
   font-size: 13px;
   color: #666;
   line-height: 30px;
@@ -198,6 +219,12 @@
 
 .setting_btn {
   display: none;
+}
+
+@media (min-width: 1200px) {
+  .menubar_aside__noti_list {
+    padding: 0px 10px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1100px) {
@@ -258,22 +285,37 @@
   #mdMoreVisible {
     display: none;
   }
+  .profile_btn {
+    margin: 0;
+  }
+
+  .fas.fa-search::before {
+    font-size: 15px;
+  }
+  .far.fa-bell::before {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 767px) {
   .mainbar_main {
     height: 110px;
+    width: 100%;
   }
   .mainbar_top {
     height: 60px;
     width: 100%;
     padding: 15px 20px;
+    box-sizing: border-box;
   }
   .mainbar_nav__menu {
     text-align: left;
   }
   .mainbar_nav__menu a {
     padding: 11px 10px 19px;
+  }
+  .profile_btn {
+    margin: 0;
   }
   #xsOnly {
     display: inline-block;
@@ -283,5 +325,11 @@
   }
   #mdMoreVisible {
     display: none;
+  }
+  .fas.fa-search::before {
+    font-size: 15px;
+  }
+  .far.fa-bell::before {
+    font-size: 15px;
   }
 }

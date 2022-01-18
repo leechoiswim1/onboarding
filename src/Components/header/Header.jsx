@@ -7,12 +7,11 @@ const Header = () => {
         <nav className="mainbar_nav">
           <div className="mainbar_top">
             <section className="mainbar_top__section">
-              <button>
+              <button type="button">
                 <i class="fas fa-bars "></i>
               </button>
               <a href="/">wanted</a>
             </section>
-            <button className="mainbar_top__sidebtn"> 회원가입하기</button>
           </div>
           <ul className="mainbar_nav__menu">
             <li id="xsOnly">
@@ -49,24 +48,33 @@ const Header = () => {
           <aside className="menubar_aside">
             <ul>
               <li>
-                <i class="fas fa-search"></i>
+                <button type="button" className="search_btn">
+                  <i class="fas fa-search"></i>
+                </button>
               </li>
-              <li class="noti_btn">
-                <i class="far fa-bell"></i>
-                <span>N</span>
+              <li className="menubar_aside__noti_list">
+                <button type="button" className="noti_btn">
+                  <i class="far fa-bell"></i>
+                  <span>N</span>
+                </button>
               </li>
-              <li class="profile_btn" id="mdMoreVisible">
-                <img
-                  src="https://static.wanted.co.kr/images/profile_default.png"
-                  alt="wanted_logo"
-                />
-                <span>N</span>
+              <li id="mdMoreVisible">
+                <button type="button" className="profile_btn">
+                  <img
+                    src="https://static.wanted.co.kr/images/profile_default.png"
+                    alt="wanted_logo"
+                  />
+                  <span>N</span>
+                </button>
               </li>
+
               <li class="service_btn" id="mdMoreVisible">
                 <a>기업서비스</a>
               </li>
-              <li class="setting_btn">
-                <i class="fas fa-ellipsis-h"></i>
+              <li>
+                <button type="button" className="setting_btn">
+                  <i class="fas fa-ellipsis-h"></i>
+                </button>
               </li>
             </ul>
           </aside>
