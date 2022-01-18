@@ -1,16 +1,20 @@
 import React from "react";
 import "./Slide.css";
-const Slide = ({ imageinfo }) => {
+const Slide = ({ imageinfo, active }) => {
   return (
-    <div className="slider_slide">
+    <div className={active ? "slider_slide active_slide" : "slider_slide"}>
       <div style={{ margin: "20px 10px" }}>
         <div className="slide_main__banner">
-          <div className="sldie_image">
+          <div className="slide_image">
             <a href="/">
               <img src={imageinfo.url}></img>
             </a>
           </div>
-          <div className="slide_information">
+          <div
+            className={
+              active ? "slide_information active_info" : "slide_information"
+            }
+          >
             <h2>{imageinfo.title}</h2>
             <h3>{imageinfo.desc}</h3>
             <hr></hr>
