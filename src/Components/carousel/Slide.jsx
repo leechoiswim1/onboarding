@@ -17,7 +17,7 @@ const Slide = ({ imageinfo, active }) => {
           >
             <h2>{imageinfo.title}</h2>
             <h3>{imageinfo.desc}</h3>
-            <hr></hr>
+            <hr className="info_hr"></hr>
             <a href="/" className="slide_link">
               <span className="slide_link_label">
                 바로가기
