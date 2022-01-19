@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useSwipeable } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Carousel.css";
 import image1 from "../../images/image1.jpg";
 import image2 from "../../images/image2.jpg";
